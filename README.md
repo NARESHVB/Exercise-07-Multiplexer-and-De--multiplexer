@@ -54,10 +54,38 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Naresh.v
+RegisterNumber:  22008873
 */
+PROGRAM
 
+Program for 4X1 Multiplexer and verify its truth table in quartus using Verilog programming.
+
+module mux(I0,I1,I2,I3,S0,S1,Y);
+
+input I0,I1,I2,I3,S0,S1;
+
+output Y;
+
+wire S0C,S1C;
+
+not(S0C,S0);
+
+not(S1C,S1);
+
+wire P,Q,R,S;
+
+and(P,S0C,S1C,I0);
+
+and(Q,S0C,S1,I1);
+
+and(R,S0,S1C,I2);
+
+and(S,S0,S1,I3);
+
+or(Y,P,Q,R,S);
+
+endmodule
 
 
 
@@ -65,6 +93,7 @@ RegisterNumber:
 
 ### RTL LOGIC  
 
+![image](https://user-images.githubusercontent.com/119393642/214844184-569a2afe-47bf-454b-9623-654e16edc096.png)
 
 
 
@@ -73,6 +102,10 @@ RegisterNumber:
 
 
 ### TIMING DIGRAMS  
+![image](https://user-images.githubusercontent.com/119393642/214844245-f420e0fa-e956-42b1-8756-5e17d53a632a.png)
+![image](https://user-images.githubusercontent.com/119393642/214844261-b41735d9-8de7-4c54-8db3-bcbe48915fa0.png)
+![image](https://user-images.githubusercontent.com/119393642/214844287-bda58034-eb7a-4e0b-ba4c-2f8b72c78c05.png)
+![image](https://user-images.githubusercontent.com/119393642/214844324-35434455-9e1d-403b-9640-50f030f71871.png)
 
 
 
@@ -80,9 +113,46 @@ RegisterNumber:
 
 ### TRUTH TABLE 
 
+![image](https://user-images.githubusercontent.com/119393642/214844389-748854e0-c1d8-4940-87ad-42f666ba4f5b.png)
 
+1X4 DEMULTIPLEXER:
 
+PROGRAM
 
+Program for 1x4 Demultiplexer and verify its truth table in quartus using Verilog programming.
 
+module demux(I,S0,S1,Y0,Y1,Y2,Y3);
+
+input I,S0,S1;
+
+output Y0,Y1,Y2,Y3;
+
+wire S0C,S1C;
+
+not(S0C,S0);
+
+not(S1C,S1);
+
+and(Y0,I,S0C,S1C);
+
+and(Y1,I,S0C,S1);
+
+and(Y2,I,S0,S1C);
+
+and(Y3,I,S0,S1);
+
+endmodule
+
+## RTL LOGIC
+
+![image](https://user-images.githubusercontent.com/119393642/214844741-c11a31e6-5b18-4422-9637-bf99b23d75b4.png)
+
+TIMING DIGRAMS
+
+![image](https://user-images.githubusercontent.com/119393642/214844801-a09c5c43-3222-4db6-a12d-cd14e35fbfb3.png)
+
+TRUTH TABLE
+
+![image](https://user-images.githubusercontent.com/119393642/214844870-a10641cd-f573-4950-993c-9d7df3597e2d.png)
 
 ### RESULTS 
