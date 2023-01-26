@@ -156,3 +156,4 @@ TRUTH TABLE
 ![image](https://user-images.githubusercontent.com/119393642/214844870-a10641cd-f573-4950-993c-9d7df3597e2d.png)
 
 ### RESULTS 
+Hence 4x1 Multiplexer and 1x4 Demultiplexer is been implemented and verified using verilog programming and its output are validated.
